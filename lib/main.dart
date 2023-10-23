@@ -102,261 +102,37 @@ class _KalkulatorState extends State<Kalkulator> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ElevatedButton(
-                      onPressed: () => button("7"),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(height / 5, width / 5),
-                        backgroundColor: Colors.primaries[
-                            Random().nextInt(Colors.primaries.length)],
-                      ),
-                      child: const Text(
-                        "7",
-                        style: TextStyle(
-                          fontSize: 56,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () => button("8"),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(height / 5, width / 5),
-                        backgroundColor: Colors.primaries[
-                            Random().nextInt(Colors.primaries.length)],
-                      ),
-                      child: const Text(
-                        "8",
-                        style: TextStyle(
-                          fontSize: 56,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () => button("9"),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(height / 5, width / 5),
-                        backgroundColor: Colors.primaries[
-                            Random().nextInt(Colors.primaries.length)],
-                      ),
-                      child: const Text(
-                        "9",
-                        style: TextStyle(
-                          fontSize: 56,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () => button("X"),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(height / 5, width / 5),
-                        backgroundColor: Colors.primaries[
-                            Random().nextInt(Colors.primaries.length)],
-                      ),
-                      child: const Text(
-                        "X",
-                        style: TextStyle(
-                          fontSize: 56,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
+                    tombol("7"),
+                    tombol("8"),
+                    tombol("9"),
+                    tombol("X"),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ElevatedButton(
-                      onPressed: () => button("4"),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(height / 5, width / 5),
-                        backgroundColor: Colors.primaries[
-                            Random().nextInt(Colors.primaries.length)],
-                      ),
-                      child: const Text(
-                        "4",
-                        style: TextStyle(
-                          fontSize: 56,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () => button("5"),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(height / 5, width / 5),
-                        backgroundColor: Colors.primaries[
-                            Random().nextInt(Colors.primaries.length)],
-                      ),
-                      child: const Text(
-                        "5",
-                        style: TextStyle(
-                          fontSize: 56,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () => button("6"),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(height / 5, width / 5),
-                        backgroundColor: Colors.primaries[
-                            Random().nextInt(Colors.primaries.length)],
-                      ),
-                      child: const Text(
-                        "6",
-                        style: TextStyle(
-                          fontSize: 56,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () => button("-"),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(height / 5, width / 5),
-                        backgroundColor: Colors.primaries[
-                            Random().nextInt(Colors.primaries.length)],
-                      ),
-                      child: const Text(
-                        "-",
-                        style: TextStyle(
-                          fontSize: 56,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
+                    tombol("4"),
+                    tombol("5"),
+                    tombol("6"),
+                    tombol("-"),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ElevatedButton(
-                      onPressed: () => button("1"),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(height / 5, width / 5),
-                        backgroundColor: Colors.primaries[
-                            Random().nextInt(Colors.primaries.length)],
-                      ),
-                      child: const Text(
-                        "1",
-                        style: TextStyle(
-                          fontSize: 56,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () => button("2"),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(height / 5, width / 5),
-                        backgroundColor: Colors.primaries[
-                            Random().nextInt(Colors.primaries.length)],
-                      ),
-                      child: const Text(
-                        "2",
-                        style: TextStyle(
-                          fontSize: 56,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () => button("3"),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(height / 5, width / 5),
-                        backgroundColor: Colors.primaries[
-                            Random().nextInt(Colors.primaries.length)],
-                      ),
-                      child: const Text(
-                        "3",
-                        style: TextStyle(
-                          fontSize: 56,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () => button("+"),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(height / 5, width / 5),
-                        backgroundColor: Colors.primaries[
-                            Random().nextInt(Colors.primaries.length)],
-                      ),
-                      child: const Text(
-                        "+",
-                        style: TextStyle(
-                          fontSize: 56,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
+                    tombol("1"),
+                    tombol("2"),
+                    tombol("3"),
+                    tombol("+"),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ElevatedButton(
-                      onPressed: () => button("C"),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(height / 5, width / 5),
-                        backgroundColor: Colors.primaries[
-                            Random().nextInt(Colors.primaries.length)],
-                      ),
-                      child: const Text(
-                        "C",
-                        style: TextStyle(
-                          fontSize: 56,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () => button("0"),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(height / 5, width / 5),
-                        backgroundColor: Colors.primaries[
-                            Random().nextInt(Colors.primaries.length)],
-                      ),
-                      child: const Text(
-                        "0",
-                        style: TextStyle(
-                          fontSize: 56,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () => button("="),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(height / 5, width / 5),
-                        backgroundColor: Colors.primaries[
-                            Random().nextInt(Colors.primaries.length)],
-                      ),
-                      child: const Text(
-                        "=",
-                        style: TextStyle(
-                          fontSize: 56,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () => button("/"),
-                      style: ElevatedButton.styleFrom(
-                        minimumSize: Size(height / 5, width / 5),
-                        backgroundColor: Colors.primaries[
-                            Random().nextInt(Colors.primaries.length)],
-                      ),
-                      child: const Text(
-                        "/",
-                        style: TextStyle(
-                          fontSize: 56,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
+                    tombol("C"),
+                    tombol("0"),
+                    tombol("="),
+                    tombol("/"),
                   ],
                 ),
               ],
@@ -367,8 +143,31 @@ class _KalkulatorState extends State<Kalkulator> {
               onPressed: () {
                 Navigator.pop(context, "/");
               },
-              child: const Text("Back"))
+              child: const Text("Back")),
+          const SizedBox(height: 10),
+          const Text(
+            "Muhammad Hilmi Izzulhaq 1101202399",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+          ),
         ],
+      ),
+    );
+  }
+
+  Widget tombol(String X) {
+    return ElevatedButton(
+      onPressed: () => button(X),
+      style: ElevatedButton.styleFrom(
+        minimumSize: Size(height / 5, width / 5),
+        backgroundColor:
+            Colors.primaries[Random().nextInt(Colors.primaries.length)],
+      ),
+      child: Text(
+        X,
+        style: const TextStyle(
+          fontSize: 56,
+          color: Colors.white,
+        ),
       ),
     );
   }
