@@ -75,121 +75,123 @@ class _KalkulatorState extends State<Kalkulator> {
         elevation: 0,
         backgroundColor: const Color(0xffCD5C08),
       ),
-      body: Padding(
+      body: ListView(
         padding: EdgeInsets.all(20),
-        child: Column(
-          children: [
-            Container(
-              alignment: Alignment.centerRight,
-              padding: EdgeInsets.symmetric(vertical: height / 10),
-              child: Text(
-                _output,
-                style: const TextStyle(
-                  fontSize: 48,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            Container(
-              alignment: Alignment.center,
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      tombol("7"),
-                      tombol("8"),
-                      tombol("9"),
-                      tombol("X"),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      tombol("4"),
-                      tombol("5"),
-                      tombol("6"),
-                      tombol("-"),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      tombol("1"),
-                      tombol("2"),
-                      tombol("3"),
-                      tombol("+"),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      tombol("C"),
-                      tombol("0"),
-                      tombol("="),
-                      tombol("/"),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 10),
-            SizedBox(
-              width: MediaQuery.of(context).size.width,
-              height: 50,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xffCD5C08),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => CalculatorGPT(), // Pass userData
-                    ),
-                  );
-                },
+        children: [
+          Column(
+            children: [
+              Container(
+                alignment: Alignment.centerRight,
+                padding: EdgeInsets.symmetric(vertical: height / 10),
                 child: Text(
-                  'ke Kalkulator ChatGPT',
-                  style: GoogleFonts.rubik(
-                    fontSize: 20.0,
-                    color: const Color(0xffC1D8C3),
+                  _output,
+                  style: const TextStyle(
+                    fontSize: 48,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
-            ),
-            const SizedBox(height: 20),
-            SizedBox(
-              width: MediaQuery.of(context).size.width,
-              height: 50,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xffCD5C08),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => LoginScreen(), // Pass userData
+              Container(
+                alignment: Alignment.center,
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        tombol("7"),
+                        tombol("8"),
+                        tombol("9"),
+                        tombol("X"),
+                      ],
                     ),
-                  );
-                },
-                child: Text(
-                  'Kembali',
-                  style: GoogleFonts.rubik(
-                    fontSize: 20.0,
-                    color: const Color(0xffC1D8C3),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        tombol("4"),
+                        tombol("5"),
+                        tombol("6"),
+                        tombol("-"),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        tombol("1"),
+                        tombol("2"),
+                        tombol("3"),
+                        tombol("+"),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        tombol("C"),
+                        tombol("0"),
+                        tombol("="),
+                        tombol("/"),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 10),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: 50,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xffCD5C08),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CalculatorGPT(), // Pass userData
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'ke Kalkulator ChatGPT',
+                    style: GoogleFonts.rubik(
+                      fontSize: 20.0,
+                      color: const Color(0xffC1D8C3),
+                    ),
                   ),
                 ),
               ),
-            ),
-            const SizedBox(height: 10),
-            const Text(
-              "Muhammad Hilmi Izzulhaq 1101202399",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
-            ),
-          ],
-        ),
+              const SizedBox(height: 20),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: 50,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xffCD5C08),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginScreen(), // Pass userData
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'Kembali',
+                    style: GoogleFonts.rubik(
+                      fontSize: 20.0,
+                      color: const Color(0xffC1D8C3),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
+              const Text(
+                "Muhammad Hilmi Izzulhaq 1101202399",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
