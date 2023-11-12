@@ -1,6 +1,6 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:kalkulator_1101202399/login.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,163 +11,129 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Kalkulator(),
+      home: Page1(),
     );
   }
 }
 
-class Kalkulator extends StatefulWidget {
-  Kalkulator({super.key});
-
-  @override
-  State<Kalkulator> createState() => _KalkulatorState();
-}
-
-class _KalkulatorState extends State<Kalkulator> {
-  var size, height, width, _output, angka, operand, num1, num2;
-  @override
-  void initState() {
-    super.initState();
-    _output = "0"; // Inisialisasi hasil menjadi "0".
-  }
-
-  button(var buttonText) {
-    if (buttonText == "C") {
-      _output = "0";
-      num1 = 0;
-      num2 = 0;
-      operand = "";
-    } else if (buttonText == "+" ||
-        buttonText == "-" ||
-        buttonText == "X" ||
-        buttonText == "/") {
-      num1 = double.parse(_output);
-      operand = buttonText;
-      _output = "";
-    } else if (buttonText == "=") {
-      num2 = double.parse(_output);
-      if (operand == "+") {
-        _output = (num1 + num2).toString();
-      } else if (operand == "-") {
-        _output = (num1 - num2).toString();
-      } else if (operand == "X") {
-        _output = (num1 * num2).toString();
-      } else if (operand == "/") {
-        _output = (num1 / num2).toString();
-      }
-      num1 = 0;
-      num2 = 0;
-      operand = "";
-    } else {
-      // Menggunakan buttonText sebagai angka, bukan operator.
-      if (_output == "0") {
-        _output = buttonText;
-      } else {
-        _output = _output + buttonText;
-      }
-    }
-
-    setState(() {
-      _output;
-    });
-  }
+class Page1 extends StatelessWidget {
+  const Page1({super.key});
 
   @override
   Widget build(BuildContext context) {
-    size = MediaQuery.of(context).size;
-    height = size.height;
-    width = size.width;
-
     return Scaffold(
-      appBar: AppBar(title: const Text("Kalkulator Sederhana")),
-      body: Column(
+      backgroundColor: const Color(0xffF5E8B7),
+      appBar: AppBar(
+        title: const Text("Project Kelas Mobile Apps"),
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: const Color(0xffCD5C08),
+      ),
+      body: ListView(
         children: [
-          Container(
-            alignment: Alignment.centerRight,
-            padding: EdgeInsets.symmetric(vertical: height / 10),
-            child: Text(
-              _output,
-              style: const TextStyle(
-                fontSize: 48,
-                fontWeight: FontWeight.bold,
+          Column(
+            children: [
+              const SizedBox(height: 20),
+              const CircleAvatar(
+                radius: 75,
+                backgroundImage: AssetImage('assets/IMG_20210604_203730.jpg'),
               ),
-            ),
-          ),
-          Container(
-            alignment: Alignment.center,
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    tombol("7"),
-                    tombol("8"),
-                    tombol("9"),
-                    tombol("X"),
-                  ],
+              const SizedBox(height: 20),
+              Text(
+                'Muhammad Hilmi I',
+                style: GoogleFonts.rubik(
+                  fontSize: 40.0,
+                  color: const Color(0xffCD5C08),
+                  fontWeight: FontWeight.bold,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    tombol("4"),
-                    tombol("5"),
-                    tombol("6"),
-                    tombol("-"),
-                  ],
+              ),
+              Text(
+                '1101202399',
+                style: GoogleFonts.rubik(
+                  fontSize: 20.0,
+                  letterSpacing: 2.5,
+                  color: const Color(0xff6A9C89),
+                  fontWeight: FontWeight.bold,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    tombol("1"),
-                    tombol("2"),
-                    tombol("3"),
-                    tombol("+"),
-                  ],
+              ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: GoogleFonts.rubik(
+                  fontSize: 20.0,
+                  letterSpacing: 2.5,
+                  color: const Color(0xff6A9C89),
+                  fontWeight: FontWeight.bold,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    tombol("C"),
-                    tombol("0"),
-                    tombol("="),
-                    tombol("/"),
-                  ],
+              ),
+              const SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Color(0xffC1D8C3),
                 ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 10),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context, "/");
-              },
-              child: const Text("Back")),
-          const SizedBox(height: 10),
-          const Text(
-            "Muhammad Hilmi Izzulhaq 1101202399",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+              ),
+              Card(
+                  color: const Color(0xff6A9C89),
+                  margin: const EdgeInsets.symmetric(
+                      vertical: 10.0, horizontal: 25.0),
+                  child: ListTile(
+                    leading: const Icon(
+                      Icons.phone,
+                      color: Color(0xffC1D8C3),
+                    ),
+                    title: Text(
+                      '+62 8966 9434 221',
+                      style: GoogleFonts.rubik(
+                        color: const Color(0xffC1D8C3),
+                        fontSize: 20.0,
+                      ),
+                    ),
+                  )),
+              Card(
+                color: const Color(0xff6A9C89),
+                margin: const EdgeInsets.symmetric(
+                    vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: const Icon(
+                    Icons.email,
+                    color: Color(0xffC1D8C3),
+                  ),
+                  title: Text(
+                    'mailhilmi@gmail.com',
+                    style: GoogleFonts.rubik(
+                      fontSize: 20.0,
+                      color: const Color(0xffC1D8C3),
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.symmetric(
+                    vertical: 10.0, horizontal: 25.0),
+                width: MediaQuery.of(context).size.width,
+                height: 60,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xffCD5C08),
+                  ),
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
+                  ),
+                  child: Text(
+                    'Masuk',
+                    style: GoogleFonts.rubik(
+                      fontSize: 20.0,
+                      color: const Color(0xffC1D8C3),
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
-      ),
-    );
-  }
-
-  Widget tombol(String X) {
-    return ElevatedButton(
-      onPressed: () => button(X),
-      style: ElevatedButton.styleFrom(
-        minimumSize: Size(height / 5, width / 5),
-        backgroundColor:
-            Colors.primaries[Random().nextInt(Colors.primaries.length)],
-      ),
-      child: Text(
-        X,
-        style: const TextStyle(
-          fontSize: 56,
-          color: Colors.white,
-        ),
       ),
     );
   }
